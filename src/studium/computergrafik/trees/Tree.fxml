@@ -101,13 +101,13 @@
  					</faces> 
  				</TriangleMesh>				 
  			</mesh> 
- 			<transforms> 
+ 			<transforms>
  				<Rotate pivotX="0" pivotY="0" pivotZ="0" angle="60"> 
  					<axis> 
  						<Point3D x="0" y="1" z="0"/> 
  					</axis> 
  				</Rotate> 
- 			</transforms> 
+ 			</transforms>
  		</MeshView> 
 
  		<MeshView cullFace="NONE"> 
@@ -149,13 +149,13 @@
  					</faces> 
  				</TriangleMesh>				 
  			</mesh> 
- 			<transforms> 
+			<transforms>
  				<Rotate pivotX="0" pivotY="0" pivotZ="0" angle="120"> 
  					<axis> 
  						<Point3D x="0" y="1" z="0"/> 
  					</axis> 
  				</Rotate> 
- 			</transforms> 
+ 			</transforms>
  		</MeshView> 
 		
 	</children>
