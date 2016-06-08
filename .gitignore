@@ -14,3 +14,4 @@ buildNumber.properties
 Stuttr/
 .DS_Store
 out/
+.idea/
