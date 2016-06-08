@@ -12,7 +12,7 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		Group eiffelTower = (Group) FXMLLoader.load(getClass().getResource(
-				"EiffelTower.fxml"));
+				"baseplate.fxml"));
 		Scene scene = new Scene(eiffelTower, 1024.0, 768.0, true, 
 				SceneAntialiasing.BALANCED);
 		Controller controller = new Controller(scene);

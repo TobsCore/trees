@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.PhongMaterial?>
+<?import javafx.scene.PointLight?>
+<?import javafx.scene.shape.Box?>
+<?import javafx.scene.transform.Translate?>
+<Group>
+	<!-- Main color -->
+	<children>
+
+		<!-- Ground plate -->
+		<Box depth="200" height="2" width="200">
+			<material>
+				<PhongMaterial>
+					<diffuseColor>
+						<Color green="0.4" />
+					</diffuseColor>
+				</PhongMaterial>
+			</material>
+		</Box>
+		
+		<!-- Light source -->
+		<PointLight color="WHITE">
+			<transforms>
+				<Translate x="0.0" y="400.0" z="-300.0" />
+			</transforms>
+		</PointLight>
+
+	</children>
+</Group>
