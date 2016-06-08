@@ -9,12 +9,10 @@ import javafx.scene.transform.Rotate;
 import javafx.scene.transform.Translate;
 import javafx.stage.Stage;
 
-import java.io.IOException;
-
 public class Controller {
 	
 	private static final double ROTATE_TICK = 10.0;
-	
+
 	private double mouseXOld;
 	private double mouseYOld;
 	private double mouseXCurr;
@@ -24,9 +22,9 @@ public class Controller {
 	
 	private Scene scene;
     private Stage primaryStage;
-	private Rotate cameraRotateX = new Rotate(0.0, Rotate.X_AXIS);
-	private Rotate cameraRotateY = new Rotate(45.0, Rotate.Y_AXIS);
-	private Translate cameraTranslate = new Translate(0.0, -150.0, -700.0);
+	private Rotate cameraRotateX = new Rotate(-30.0, Rotate.X_AXIS);
+	private Rotate cameraRotateY = new Rotate(-185.0, Rotate.Y_AXIS);
+	private Translate cameraTranslate = new Translate(5.0, 2.0, -295.97);
 	
 	public Controller(Scene scene) {
 		this.scene = scene;
@@ -70,7 +68,7 @@ public class Controller {
 				cameraRotateX.setAngle(cameraRotateX.getAngle() - ROTATE_TICK);
 				break;
             case SPACE:
-                    createEifelTower();
+                    createTree();
                     break;
 			default:
 				// For the sake of conventions.
@@ -79,16 +77,33 @@ public class Controller {
 		});
 	}
 
-    private void createEifelTower() {
-        double randomXPosition;
-        double randomYPosition;
+    private void createTree() {
+        double randomXPosition = (Math.random() * 200) - 100;
+        double randomZPosition = (Math.random() * 200) - 100;
         try {
-            Group eiffelTower = (Group) FXMLLoader.load(getClass().getResource(
-                    "Eifeltower.fxml"));
-            ((Group) scene.getRoot()).getChildren().add(eiffelTower);
+            Group tree = (Group) FXMLLoader.load(getClass().getResource(
+                    "Tree.fxml"));
+            tree.setTranslateX(randomXPosition);
+            tree.setTranslateZ(randomZPosition);
+            tree.setScaleX(0.3);
+            tree.setScaleZ(0.3);
+            tree.setScaleY(0.3);
+            tree.setTranslateY(tree.getTranslateY()-53);
+
+            ((Group) scene.getRoot()).getChildren().add(tree);
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+       // printCameraPosition();
+    }
+
+    private void printCameraPosition() {
+        System.out.println("Rotate X: " + cameraRotateX.getAngle());
+        System.out.println("Rotate Y: " + cameraRotateY.getAngle());
+        System.out.println("Translate X: " + cameraTranslate.getX());
+        System.out.println("Translate Y: " + cameraTranslate.getY());
+        System.out.println("Translate Z: " + cameraTranslate.getZ());
     }
 
     private final void addMouseHandlers() {

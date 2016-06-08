@@ -18,6 +18,7 @@ public class Main extends Application {
 
 
 		Controller controller = new Controller(scene, primaryStage);
+
 		
 		primaryStage.setTitle("Eiffel Tower");
 		primaryStage.setScene(scene);

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.shape.MeshView?>
+<?import javafx.scene.shape.TriangleMesh?>
+<?import javafx.scene.paint.PhongMaterial?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.paint.Material?>
+<?import javafx.scene.transform.Rotate?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.paint.Color?>
+
+<Group xmlns:fx="http://javafx.com/fxml">
+	
+	<children>
+		
+		<MeshView cullFace="NONE">
+			<material>
+				<PhongMaterial>
+					<diffuseMap>
+						<Image url="@Tree.png" />
+					</diffuseMap>
+				</PhongMaterial>
+			</material>
+			<mesh>
+				<TriangleMesh>
+					<points>
+						-7.5 0.0   0.0
+						 7.5 0.0   0.0
+						 7.5 14.06 0.0
+						 30  14.06 0.0
+						 30  150   0.0
+						-30  150   0.0
+						-30  14.06 0.0
+						-7.5 14.06 0.0						 
+					</points>
+					<texCoords>
+						0.375 0.00000
+						0.625 0.00000					
+						0.625 0.03125
+						1.000 0.03125
+						1.000 1.00000
+						0.000 1.00000
+						0.000 0.03125
+						0.375 0.03125
+					</texCoords>
+					<faces>
+						0 0 1 1 7 7
+						1 1 2 2 7 7
+						
+						6 6 3 3 4 4
+						6 6 4 4 5 5
+					</faces>
+				</TriangleMesh>				
+			</mesh>
+			<transforms>
+				<Rotate pivotX="0" pivotY="0" pivotZ="0" angle="0">
+					<axis>
+						<Point3D x="0" y="1" z="0"/>
+					</axis>
+				</Rotate>
+			</transforms>
+		</MeshView>
+		
+ 		<MeshView cullFace="NONE"> 
+ 			<material> 
+ 				<PhongMaterial> 
+ 					<diffuseMap> 
+ 						<Image url="@Tree.png" />
+ 					</diffuseMap> 
+ 				</PhongMaterial> 
+ 			</material> 
+ 			<mesh> 
+ 				<TriangleMesh> 
+ 					<points> 
+ 						-7.5 0.0   0.0 
+ 						 7.5 0.0   0.0 
+ 						 7.5 14.06 0.0 
+ 						 30  14.06 0.0 
+ 						 30  150   0.0 
+ 						-30  150   0.0 
+ 						-30  14.06 0.0 
+ 						-7.5 14.06 0.0						  
+ 					</points> 
+ 					<texCoords> 
+ 						0.375 0.00000 
+ 						0.625 0.00000					 
+ 						0.625 0.03125 
+ 						1.000 0.03125 
+ 						1.000 1.00000 
+ 						0.000 1.00000 
+ 						0.000 0.03125 
+ 						0.375 0.03125 
+ 					</texCoords> 
+ 					<faces> 
+ 						0 0 1 1 7 7 
+ 						1 1 2 2 7 7 
+						
+ 						6 6 3 3 4 4 
+ 						6 6 4 4 5 5 
+ 					</faces> 
+ 				</TriangleMesh>				 
+ 			</mesh> 
+ 			<transforms> 
+ 				<Rotate pivotX="0" pivotY="0" pivotZ="0" angle="60"> 
+ 					<axis> 
+ 						<Point3D x="0" y="1" z="0"/> 
+ 					</axis> 
+ 				</Rotate> 
+ 			</transforms> 
+ 		</MeshView> 
+
+ 		<MeshView cullFace="NONE"> 
+ 			<material> 
+ 				<PhongMaterial> 
+ 					<diffuseMap> 
+ 						<Image url="@Tree.png" />
+ 					</diffuseMap> 
+ 				</PhongMaterial> 
+ 			</material> 
+ 			<mesh> 
+ 				<TriangleMesh> 
+ 					<points> 
+ 						-7.5 0.0   0.0 
+ 						 7.5 0.0   0.0 
+ 						 7.5 14.06 0.0 
+ 						 30  14.06 0.0 
+ 						 30  150   0.0 
+ 						-30  150   0.0 
+ 						-30  14.06 0.0 
+ 						-7.5 14.06 0.0						  
+ 					</points> 
+ 					<texCoords> 
+ 						0.375 0.00000 
+ 						0.625 0.00000					 
+ 						0.625 0.03125 
+ 						1.000 0.03125 
+ 						1.000 1.00000 
+ 						0.000 1.00000 
+ 						0.000 0.03125 
+ 						0.375 0.03125 
+ 					</texCoords> 
+ 					<faces> 
+ 						0 0 1 1 7 7 
+ 						1 1 2 2 7 7 
+						
+ 						6 6 3 3 4 4 
+ 						6 6 4 4 5 5 
+ 					</faces> 
+ 				</TriangleMesh>				 
+ 			</mesh> 
+ 			<transforms> 
+ 				<Rotate pivotX="0" pivotY="0" pivotZ="0" angle="120"> 
+ 					<axis> 
+ 						<Point3D x="0" y="1" z="0"/> 
+ 					</axis> 
+ 				</Rotate> 
+ 			</transforms> 
+ 		</MeshView> 
+		
+	</children>
+</Group>
+

@@ -3,9 +3,10 @@
 <?import javafx.scene.Group?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.paint.PhongMaterial?>
-<?import javafx.scene.PointLight?>
+<?import javafx.scene.AmbientLight?>
 <?import javafx.scene.shape.Box?>
 <?import javafx.scene.transform.Translate?>
+<?import javax.xml.crypto.dsig.Transform?>
 <Group>
 	<!-- Main color -->
 	<children>
@@ -22,11 +23,9 @@
 		</Box>
 		
 		<!-- Light source -->
-		<PointLight color="WHITE">
-			<transforms>
-				<Translate x="0.0" y="400.0" z="-300.0" />
-			</transforms>
-		</PointLight>
+		<AmbientLight color="WHITE">
+
+		</AmbientLight>
 
 	</children>
 </Group>
