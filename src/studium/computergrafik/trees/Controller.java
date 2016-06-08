@@ -1,10 +1,15 @@
 package studium.computergrafik.trees;
 
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Camera;
+import javafx.scene.Group;
 import javafx.scene.PerspectiveCamera;
 import javafx.scene.Scene;
 import javafx.scene.transform.Rotate;
 import javafx.scene.transform.Translate;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class Controller {
 	
@@ -18,6 +23,7 @@ public class Controller {
 	private double mouseYDelta;
 	
 	private Scene scene;
+    private Stage primaryStage;
 	private Rotate cameraRotateX = new Rotate(0.0, Rotate.X_AXIS);
 	private Rotate cameraRotateY = new Rotate(45.0, Rotate.Y_AXIS);
 	private Translate cameraTranslate = new Translate(0.0, -150.0, -700.0);
@@ -29,8 +35,13 @@ public class Controller {
 		addKeyHandlers();
 		addMouseHandlers();
 	}
-	
-	private final Camera setUpCamera() {
+
+    public Controller(Scene scene, Stage primaryStage) {
+        this(scene);
+        this.primaryStage = primaryStage;
+    }
+
+    private final Camera setUpCamera() {
 		PerspectiveCamera camera = new PerspectiveCamera(true);
 		
 		camera.setFieldOfView(40.0);
@@ -58,6 +69,9 @@ public class Controller {
 			case DOWN:
 				cameraRotateX.setAngle(cameraRotateX.getAngle() - ROTATE_TICK);
 				break;
+            case SPACE:
+                    createEifelTower();
+                    break;
 			default:
 				// For the sake of conventions.
 				break;
@@ -65,7 +79,19 @@ public class Controller {
 		});
 	}
 
-	private final void addMouseHandlers() {
+    private void createEifelTower() {
+        double randomXPosition;
+        double randomYPosition;
+        try {
+            Group eiffelTower = (Group) FXMLLoader.load(getClass().getResource(
+                    "Eifeltower.fxml"));
+            ((Group) scene.getRoot()).getChildren().add(eiffelTower);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private final void addMouseHandlers() {
         scene.setOnMousePressed(event -> {
             mouseXCurr = event.getSceneX();
             mouseYCurr = event.getSceneY();

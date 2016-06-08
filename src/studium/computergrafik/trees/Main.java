@@ -15,7 +15,9 @@ public class Main extends Application {
 				"baseplate.fxml"));
 		Scene scene = new Scene(eiffelTower, 1024.0, 768.0, true, 
 				SceneAntialiasing.BALANCED);
-		Controller controller = new Controller(scene);
+
+
+		Controller controller = new Controller(scene, primaryStage);
 		
 		primaryStage.setTitle("Eiffel Tower");
 		primaryStage.setScene(scene);
