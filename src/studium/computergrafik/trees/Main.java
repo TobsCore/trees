@@ -20,7 +20,7 @@ public class Main extends Application {
 		Controller controller = new Controller(scene, primaryStage);
 
 		
-		primaryStage.setTitle("Trees");
+		primaryStage.setTitle("Trees von Adrian Wörle, Tobias Kerst, Patrick König");
 		primaryStage.setScene(scene);
 		primaryStage.show();
 	}
